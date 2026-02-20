@@ -21,22 +21,39 @@
 }
 
     
+html{
+}
 
 body{
     background-color: var(--base-200);
     padding: 0px;
     margin: 0px;
+
+    width: 100%;
 }
 
 main{
+    width: calc(100%-1rem);
     padding: 1rem;
+}
+
+#samus{
+    display: inherit;
+}
+
+#navSamus{
+    display: inline-flex;
+}
+
+#darkSamus, #navDarkSamus{
+    display: none;
 }
 
 hr{
     border-top: 2px solid var(--accent);
 }
 
-#informacion{
+#informacionSamus, #informacionDarkSamus{
     display: inline-grid;
     align-items: center;
     grid-template: auto / auto auto auto;
@@ -91,24 +108,41 @@ hr{
     margin-bottom: 2rem;
 }
 
-#colores{
+@media screen and (min-width: 0px) and (max-width: 1200px) {
+    #informacionSamus, #informacionDarkSamus{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .side-information{
+        width: 100%;
+    }
+
+    .side-image{
+        width: 100%;
+    }
+}
+
+#coloresDarkSamus, #coloresSamus {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+
 }
 
-#colores hr{
+#coloresDarkSamus hr, #coloresSamus hr{
     width: 100%;
 }
 
-#colores h2{
+#coloresDarkSamus h2, #coloresSamus h2{
     width: 100%;
     color: var(--base-content);
 
 }
 
-#colores div{
+#coloresDarkSamus div, #coloresSamus div{
     margin-top: 1rem; 
     overflow-x: auto;
     background-color: var(--base-100);
@@ -118,11 +152,11 @@ hr{
     padding: 1rem;
 }
 
-#curiosidades{
+#curiosidadesSamus, #curiosidadesDarkSamus{
     color: var(--base-content);
 }
 
-#curiosidades ul{
+#curiosidadesSamus ul, #curiosidadesDarkSamus ul{
     line-height: 1.8rem;
     font-size: 1.1rem;
 
@@ -151,6 +185,10 @@ hr{
     border-style: solid;
     border-color: var(--secondary);
     border-width: 2px;
+}
+
+#contacto label{
+    color: var(--base-content);
 }
 
 #contacto textarea{
@@ -213,6 +251,7 @@ nav button{
     background-color: var(--secondary);
     color: var(--secondary-content);
     display: flex;
+    gap: 0.5rem;
     align-items: center;
     height: 100%;
     padding-left: 1rem;

@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samus</title>
+    <title id="pageTitle">Samus</title>
+    <link id="icon" rel="shortcut icon" href="./src/img/samusIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
     <!-- <button onclick="changeMode()"></button> -->
 
-    <nav>
+    <nav id="navSamus">
         <ul>
-            <li><a href="#colores">Paleta de colores</a></li>
-            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#coloresSamus">Paleta de colores</a></li>
+            <li><a href="#curiosidadesSamus">Curiosidades</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
 
@@ -26,9 +27,25 @@
         </button>
     </nav>
 
-    <main>
+    <nav id="navDarkSamus">
+        <ul>
+            <li><a href="#coloresDarkSamus">Paleta de colores</a></li>
+            <li><a href="#curiosidadesDarkSamus">Curiosidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-        <section id="informacion">
+        <button onclick="changeMode()">
+            <p>
+                Modo Claro
+            </p>
+
+            <img src="./src/img/SamusIcon.png" alt="">
+        </button>
+    </nav>
+
+    <main id="samus">
+
+        <section id="informacionSamus">
             <div class="side-information">
 
                 <h1>Samus Aran</h1>
@@ -56,7 +73,7 @@
             </div>
         </section>
 
-        <section id="colores">
+        <section id="coloresSamus">
             <h2>Paleta de colores</h2>
             <hr>
             <div>
@@ -64,7 +81,51 @@
             </div>
         </section>
 
-        <section id="curiosidades">
+        <section id="curiosidadesSamus">
+            <h2>Curiosidades</h2>
+            <hr>
+            <ul>
+                <li>Samus es la única personaje inicial que posee un Luchador Eco.</li>
+            </ul>
+        </section>
+
+    </main>
+    
+    <main id="darkSamus">
+
+        <section id="informacionDarkSamus">
+            <div class="side-information">
+
+                <h1>Dark Samus</h1>
+
+                <hr>
+
+                <p>
+                    Samus Oscura (Dark Samus en inglés; ダークサムス Dāku Samusu en japonés) es uno de los personajes jugables en Super Smash Bros. Ultimate, la sexta entrega de la serie Super Smash Bros., la cual será lanzada para Nintendo Switch. Su aparición como un personaje jugable fue confirmada durante el Nintendo Direct realizado el 8 de agosto del año 2018, junto a Simon, Richter, Chrom y King K. Rool.
+
+                    Samus Oscura actúa como una de los "Luchadores Eco" que aparecen en el juego. En su caso, es una Luchadora Eco de Samus, por lo que todos sus movimientos son similares a los de ella, aunque con unos cuantos cambios. Entre las diferencias estéticas, destaca el hecho de que Samus Oscura posee varias animaciones nuevas (como su doble salto), además de que flota a nivel del suelo, en vez de apoyarse directamente sobre el mismo; como tal, a pesar de tener los mismos movimientos que Samus, las animaciones de estos están ligeramente alteradas para que puedan concordar con su postura flotante. Además, porta diferencias visuales en sus armas, como sus misiles y el Disparo carga.
+                </p>
+
+
+            </div>
+
+            <div class="side-image">
+                <div>
+                    <img src="./src/img/darkSamus.png" alt="Dark Samus">
+                    <small>Dark Samus en SSBU</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="coloresDarkSamus">
+            <h2>Paleta de colores</h2>
+            <hr>
+            <div>
+                <img src="./src/img/darkSamusPalette.png" alt="">
+            </div>
+        </section>
+
+        <section id="curiosidadesDarkSamus">
             <h2>Curiosidades</h2>
             <hr>
             <ul>
@@ -74,7 +135,7 @@
         </section>
 
     </main>
-    
+
     <main>
         <section id="contacto">
             <h2>Contacto</h2>
@@ -121,6 +182,15 @@
     var r = document.querySelector(':root');
     var lightmode = true;
 
+    var navSamus = document.getElementById("navSamus");
+    var navDarkSamus = document.getElementById("navDarkSamus")
+    
+    var samus = document.getElementById("samus");
+    var darkSamus = document.getElementById("darkSamus");
+
+    var icon = document.getElementById("icon");
+    var title = document.getElementById("title");
+
     function changeMode(){
         lightmode = !lightmode;
 
@@ -149,6 +219,15 @@
         r.style.setProperty('--base-200', '#2f2982');
         r.style.setProperty('--base-300', '#3527a9');
         r.style.setProperty('--base-content', '#e0e7ff');
+
+        navSamus.style.display = "none";
+        navDarkSamus.style.display = "inline-flex";
+
+        samus.style.display = "none";
+        darkSamus.style.display = "inherit";
+
+        icon.setAttribute("href", "./src/img/darkSamusIcon.png");
+        document.title = "Dark Samus";
     }
 
     function setLightMode() {
@@ -169,6 +248,15 @@
         r.style.setProperty('--base-200', '#feecd3');
         r.style.setProperty('--base-300', '#ffd6a7');
         r.style.setProperty('--base-content', '#7c2808');
+
+        navDarkSamus.style.display = "none";
+        navSamus.style.display = "inline-flex";
+
+        darkSamus.style.display = "none";
+        samus.style.display = "inherit"
+
+        icon.setAttribute("href", "./src/img/samusIcon.png");
+        document.title  = "Samus";
 
     }
 </script>
