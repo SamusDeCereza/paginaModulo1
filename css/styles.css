@@ -15,6 +15,9 @@
     --base-200: #feecd3;
     --base-300: #ffd6a7;
     --base-content: #7c2808;
+
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+;
 }
 
     
@@ -25,6 +28,10 @@ body{
 
 main{
     padding: 1rem;
+}
+
+hr{
+    border-top: 2px solid var(--accent);
 }
 
 #informacion{
@@ -66,6 +73,7 @@ main{
 }
 
 .side-image div{
+    box-shadow: var(--box-shadow);
     border-radius: 1rem;
     background-color: var(--base-100);
     padding: 2rem;
@@ -83,15 +91,29 @@ main{
 
 #colores{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#colores hr{
+    width: 100%;
 }
 
 #colores h2{
+    width: 100%;
     color: var(--base-content);
 
 }
 
 #colores div{
+    margin-top: 1rem; 
     overflow-x: auto;
+    background-color: var(--base-100);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    width: fit-content;
+    padding: 1rem;
 }
 
 #curiosidades{
@@ -102,4 +124,45 @@ main{
     line-height: 1.8rem;
     font-size: 1.1rem;
 
+}
+
+#contacto h2{
+    color: var(--base-content);
+}
+
+#contacto form{
+    box-shadow: var(--box-shadow);
+    background-color: var(--base-100);
+    box-shadow: grey;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contacto input, textarea{
+    margin-left: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    border-style: solid;
+    border-color: var(--secondary);
+    border-width: 2px;
+}
+
+#contacto textarea{
+    margin-right: 2rem;
+}
+
+.btn-submit{
+    background-color: var(--secondary);
+    color: var(--secondary-content);
+    font-weight: bold;
+    padding: 0.3rem 1rem 0.3rem 1rem !important;
+}
+
+#contacto div{
+    display: flex;
+    gap: 1rem;
 }
