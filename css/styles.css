@@ -268,3 +268,31 @@ nav img{
     width: 3rem;
     height: 3rem;
 }
+
+footer{
+    width: 100%;
+    background-color: var(--base-300);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: inline-flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+footer small
+{
+    color: var(--base-content);
+    opacity: 0.8;
+
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--base-content);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+footer a:hover{
+    color: var(--accent);
+}
