@@ -44,10 +44,15 @@ Todas las imágenes se encuentran dentro de la carpeta:
 
 ---
 
-## Link de la pagina desplegada
-
+## Link de la pagina desplegada en GitHub Pages
 
 `https://samusdecereza.github.io/paginaModulo1/`
+
+---
+
+## Link del repositorio en GitHub
+
+`https://github.com/SamusDeCereza/paginaModulo1`
 
 
 # ╔══════════════════════════════════════╗
