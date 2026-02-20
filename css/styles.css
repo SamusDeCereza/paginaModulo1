@@ -81,11 +81,25 @@ main{
     margin-bottom: 2rem;
 }
 
-#colors{
+#colores{
     text-align: center;
+}
+
+#colores h2{
+    color: var(--base-content);
+
+}
+
+#colores div{
+    overflow-x: auto;
+}
+
+#curiosidades{
     color: var(--base-content);
 }
 
-#colors div{
-    overflow-x: auto;
+#curiosidades ul{
+    line-height: 1.8rem;
+    font-size: 1.1rem;
+
 }
