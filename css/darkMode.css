@@ -1,0 +1,18 @@
+:root{
+    --primary: #fcb700;
+    --primary-content: #431700;
+    
+    --secondary: #4ea0ff; 
+    --secondary-content: #162455;
+    
+    --accent: #ff8904;
+    --accent-content: #421104;
+    
+    --neutral: #1c184b;
+    --neutral-content: #edf1fe;
+    
+    --base-100: #1c184b;
+    --base-200: #2f2982;
+    --base-300: #3527a9;
+    --base-content: #e0e7ff;
+}

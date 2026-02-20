@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samus</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <button onclick="changeMode()"></button>
+    
+</body>
+
+<script>
+    var r = document.querySelector(':root');
+    var lightmode = true;
+
+    function changeMode(){
+        lightmode = !lightmode;
+
+        if(lightmode){
+            setLightMode();
+        }else{
+            setDarkMode();
+        }
+    }
+
+
+    function setDarkMode() {
+        r.style.setProperty('--primary', '#fcb700');
+        r.style.setProperty('--primary-content', '#431700');
+
+        r.style.setProperty('--secondary', '#4ea0ff');
+        r.style.setProperty('--secondary-content', '#162455');
+
+        r.style.setProperty('--accent', '#ff8904');
+        r.style.setProperty('--accent-content', '#421104');
+
+        r.style.setProperty('--neutral', '#1c184b');
+        r.style.setProperty('--neutral-content', '#edf1fe');
+
+        
+        r.style.setProperty('--base-100', '#1c184b');
+        r.style.setProperty('--base-200', '#2f2982');
+        r.style.setProperty('--base-300', '#3527a9');
+        r.style.setProperty('--base-content', '#e0e7ff');
+    }
+
+    function setLightMode() {
+        r.style.setProperty('--primary', '#135bf9');
+        r.style.setProperty('--primary-content', '#eff6ff');
+
+        r.style.setProperty('--secondary', '#f34700');
+        r.style.setProperty('--secondary-content', '#fff7ed');
+
+        r.style.setProperty('--accent', '#5ca300');
+        r.style.setProperty('--accent-content', '#f5fce5');
+
+        r.style.setProperty('--neutral', '#f34700');
+        r.style.setProperty('--neutral-content', '#fff7ed');
+
+        
+        r.style.setProperty('--base-100', '#fff7ed');
+        r.style.setProperty('--base-200', '#feecd3');
+        r.style.setProperty('--base-300', '#ffd6a7');
+        r.style.setProperty('--base-content', '#7c2808');
+
+    }
+</script>
+
+</html>

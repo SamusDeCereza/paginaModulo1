@@ -1,0 +1,24 @@
+:root{
+    --primary: #135bf9;
+    --primary-content: #eff6ff;
+    
+    --secondary: #f34700; 
+    --secondary-content: #fff7ed;
+    
+    --accent: #5ca300;
+    --accent-content: #f5fce5;
+    
+    --neutral: #f34700;
+    --neutral-content: #fff7ed;
+    
+    --base-100: #fff7ed;
+    --base-200: #feecd3;
+    --base-300: #ffd6a7;
+    --base-content: #7c2808;
+}
+
+    
+
+body{
+    background-color: var(--base-100);
+}
