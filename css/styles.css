@@ -27,7 +27,7 @@ main{
     padding: 1rem;
 }
 
-#samus{
+#informacion{
     display: inline-grid;
     align-items: center;
     grid-template: auto / auto auto auto;
@@ -79,4 +79,13 @@ main{
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
+}
+
+#colors{
+    text-align: center;
+    color: var(--base-content);
+}
+
+#colors div{
+    overflow-x: auto;
 }
